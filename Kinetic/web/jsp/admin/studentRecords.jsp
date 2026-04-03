@@ -15,7 +15,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: white;
+            background: #f5f5f5;
             color: #333;
             line-height: 1.6;
         }
@@ -26,41 +26,42 @@
             padding: 20px;
         }
         
-        /* Header */
+        /* Header - Brighter Egerton Green */
         .header {
+            background: #2d6a4f;
+            color: white;
             text-align: center;
+            padding: 25px;
             margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #e0e0e0;
+            border-radius: 5px;
         }
         
         .header h1 {
-            color: #2c3e50;
             font-size: 28px;
             font-weight: 600;
             margin-bottom: 8px;
+            letter-spacing: 1px;
         }
         
         .header p {
-            color: #7f8c8d;
             font-size: 14px;
+            opacity: 0.9;
         }
         
         /* Card */
         .card {
             background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             padding: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         
         .card h3 {
-            color: #2c3e50;
+            color: #2d6a4f;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid #f5a623;
             display: inline-block;
             font-weight: 600;
         }
@@ -97,7 +98,7 @@
         
         .form-group input:focus {
             outline: none;
-            border-color: #3498db;
+            border-color: #f5a623;
         }
         
         /* Buttons */
@@ -116,17 +117,17 @@
         }
         
         .btn-primary {
-            background: #3498db;
+            background: #2d6a4f;
             color: white;
         }
         
         .btn-secondary {
-            background: #95a5a6;
-            color: white;
+            background: #f5a623;
+            color: #333;
         }
         
         .btn-edit {
-            background: #2ecc71;
+            background: #2d6a4f;
             color: white;
             padding: 5px 12px;
             font-size: 12px;
@@ -134,7 +135,7 @@
         }
         
         .btn-delete {
-            background: #e74c3c;
+            background: #c0392b;
             color: white;
             padding: 5px 12px;
             font-size: 12px;
@@ -153,12 +154,11 @@
         }
         
         th {
-            background: #f8f9fa;
-            color: #2c3e50;
+            background: #2d6a4f;
+            color: white;
             padding: 12px;
             text-align: left;
             font-weight: 600;
-            border-bottom: 2px solid #e0e0e0;
         }
         
         td {
@@ -167,7 +167,7 @@
         }
         
         tr:hover {
-            background: #fafafa;
+            background: #f9f9f9;
         }
         
         /* Messages */
@@ -193,16 +193,17 @@
         /* Footer */
         .footer {
             text-align: center;
-            color: #95a5a6;
+            background: #2d6a4f;
+            color: white;
             font-size: 12px;
             margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 5px;
         }
         
         .badge {
-            background: #ecf0f1;
-            color: #7f8c8d;
+            background: #f5a623;
+            color: #333;
             padding: 4px 10px;
             border-radius: 20px;
             font-size: 11px;
@@ -211,7 +212,7 @@
         
         .empty-row {
             text-align: center;
-            color: #95a5a6;
+            color: #999;
             padding: 30px;
         }
     </style>
@@ -219,7 +220,7 @@
 <body>
 <div class="container">
     <div class="header">
-        <h1>Egerton University</h1>
+        <h1>EGERTON UNIVERSITY</h1>
         <p>Digital Campus Entry Verification System | Student Records Management</p>
     </div>
 
@@ -320,7 +321,7 @@
     </div>
     
     <div class="footer">
-        <p>Egerton University | Digital Campus Entry Verification System</p>
+        <p>© 2026 Egerton University | Transforming Lives Through Quality Education</p>
     </div>
 </div>
 
