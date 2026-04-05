@@ -1,1 +1,5 @@
 /Kinetic/nbproject/private/
+target/
+*.class
+*.log
+*.war
