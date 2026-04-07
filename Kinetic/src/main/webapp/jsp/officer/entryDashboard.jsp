@@ -182,6 +182,12 @@
                 <a href="<%= base %>?page=logs&filter=all" class="menu-item <%= "logs".equals(pageParam) ? "active" : "" %>">
                     <i class="fas fa-history"></i> Full Logs
                 </a>
+                <a href="<%= request.getContextPath() %>/officer/reports" class="menu-item">
+                    <i class="fas fa-file-alt"></i> Reports
+                </a>
+                <a href="<%= request.getContextPath() %>/officer/analytics" class="menu-item">
+                    <i class="fas fa-chart-line"></i> Analytics
+                </a>
                 <a href="<%= request.getContextPath() %>/jsp/officer/home.jsp" class="menu-item">
                     <i class="fas fa-arrow-left"></i> Officer Home
                 </a>

@@ -196,6 +196,8 @@
             <a class="nav-link" href="<%= request.getContextPath() %>/jsp/officer/scan.jsp">Scan Station</a>
             <a class="nav-link" href="<%= request.getContextPath() %>/jsp/officer/entryDashboard.jsp?page=dashboard&filter=all">Entry Dashboard</a>
             <a class="nav-link active" href="<%= request.getContextPath() %>/officer/students">Student Management</a>
+            <a class="nav-link" href="<%= request.getContextPath() %>/officer/reports">Reports</a>
+            <a class="nav-link" href="<%= request.getContextPath() %>/officer/analytics">Analytics</a>
             <a class="nav-link" href="<%= request.getContextPath() %>/logout">Logout</a>
         </aside>
 

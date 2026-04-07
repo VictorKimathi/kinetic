@@ -68,6 +68,8 @@
 			<a class="topbar-link" href="<%= request.getContextPath() %>/jsp/officer/home.jsp">Home</a>
 			<a class="topbar-link" href="<%= request.getContextPath() %>/officer/students">Students</a>
 			<a class="topbar-link" href="<%= request.getContextPath() %>/jsp/officer/entryDashboard.jsp?page=dashboard&filter=all">Entry</a>
+			<a class="topbar-link" href="<%= request.getContextPath() %>/officer/reports">Reports</a>
+			<a class="topbar-link" href="<%= request.getContextPath() %>/officer/analytics">Analytics</a>
 			<a class="topbar-link" href="<%= request.getContextPath() %>/logout">Logout</a>
 		</nav>
 	</header>
@@ -79,6 +81,8 @@
 			<!-- <a class="nav-link" href="<%= request.getContextPath() %>/jsp/officer/scan.jsp">Scan Station</a> -->
 			<a class="nav-link" href="<%= request.getContextPath() %>/jsp/officer/entryDashboard.jsp?page=dashboard&filter=all">Entry Dashboard</a>
 			<a class="nav-link" href="<%= request.getContextPath() %>/officer/students">Student Management</a>
+			<a class="nav-link" href="<%= request.getContextPath() %>/officer/reports">Reports</a>
+			<a class="nav-link" href="<%= request.getContextPath() %>/officer/analytics">Analytics</a>
 			<a class="nav-link" href="<%= request.getContextPath() %>/logout">Logout</a>
 		</aside>
 

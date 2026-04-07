@@ -70,6 +70,26 @@
         <url-pattern>/officer/students</url-pattern>
     </servlet-mapping>
 
+    <!-- Officer Reports Servlet -->
+    <servlet>
+        <servlet-name>ReportServlet</servlet-name>
+        <servlet-class>servlet.ReportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReportServlet</servlet-name>
+        <url-pattern>/officer/reports</url-pattern>
+    </servlet-mapping>
+
+    <!-- Officer Analytics Servlet -->
+    <servlet>
+        <servlet-name>AnalyticsServlet</servlet-name>
+        <servlet-class>servlet.AnalyticsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AnalyticsServlet</servlet-name>
+        <url-pattern>/officer/analytics</url-pattern>
+    </servlet-mapping>
+
     <!-- Egerton Entry Logging Servlet -->
     <servlet>
         <servlet-name>LoggingServlet</servlet-name>
