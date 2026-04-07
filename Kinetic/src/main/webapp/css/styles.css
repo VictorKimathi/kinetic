@@ -1,0 +1,514 @@
+/* 
+   KINETIC Design Philosophy CSS
+   Principles: Clarity, Trust, Mobile-First, Low Cognitive Load
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary Colors - Trust and Authority */
+    --primary-color: #0b8b47;      /* Egerton Green */
+    --accent-color: #00a868;        /* Fresh Green - Verification, Go */
+    --danger-color: #d73a49;        /* Red - Stop, Error, Caution */
+    --warning-color: #ffa500;       /* Orange - Attention */
+    --success-color: #28a745;       /* Green - Success confirmation */
+    
+    /* Workspace Colors */
+    --light-bg: #f2faf5;
+    --white: #ffffff;
+    --dark-text: #1a1a1a;
+    --light-text: #666666;
+    --border-color: #cfe8d8;
+    --error-bg: #fee;
+    
+    /* Typography */
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-size-base: 16px;
+    --font-size-large: 18px;
+    --font-size-small: 14px;
+    
+    /* Spacing (for consistency) */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Base Styles */
+html, body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--light-text);
+}
+
+/* Container & Layout */
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.form-row.full {
+    grid-template-columns: 1fr;
+}
+
+label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+    color: var(--primary-color);
+    font-size: var(--font-size-base);
+}
+
+label .required {
+    color: var(--danger-color);
+    margin-left: 2px;
+}
+
+/* Input Fields - Mobile-First, High Contrast */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: var(--font-size-base);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-family: var(--font-family);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: var(--white);
+    color: var(--dark-text);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(26, 58, 82, 0.1);
+}
+
+/* Error State */
+input.error,
+select.error {
+    border-color: var(--danger-color);
+    background-color: var(--error-bg);
+}
+
+input.error:focus,
+select.error:focus {
+    box-shadow: 0 0 0 3px rgba(215, 58, 73, 0.1);
+}
+
+/* Success State */
+input.success {
+    border-color: var(--success-color);
+}
+
+/* Input Field Styling for Clarity */
+select {
+    cursor: pointer;
+    appearance: none;
+    padding-right: 30px;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"%3e%3cpolyline points="6 9 12 15 18 9"%3e%3c/polyline%3e%3c/svg%3e');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 20px;
+    padding-right: 36px;
+}
+
+/* Placeholder Styling */
+::placeholder {
+    color: var(--light-text);
+    opacity: 0.7;
+}
+
+/* Validation Messages */
+.validation-error {
+    display: none;
+    color: var(--danger-color);
+    font-size: var(--font-size-small);
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.validation-error.show {
+    display: block;
+}
+
+.validation-success {
+    display: none;
+    color: var(--success-color);
+    font-size: var(--font-size-small);
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.validation-success.show {
+    display: block;
+}
+
+/* Buttons - Large Tap Targets for Mobile */
+button,
+.btn {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: var(--font-size-large);
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+    font-family: var(--font-family);
+}
+
+button:active,
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Primary Button - Main Action */
+.btn-primary,
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover,
+button[type="submit"]:hover {
+    background-color: #142d40;
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:active,
+button[type="submit"]:active {
+    background-color: #0f1f2d;
+}
+
+.btn-primary:disabled,
+button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Success Button */
+.btn-success {
+    background-color: var(--success-color);
+    color: var(--white);
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Danger Button */
+.btn-danger {
+    background-color: var(--danger-color);
+    color: var(--white);
+}
+
+.btn-danger:hover {
+    background-color: #c1192b;
+}
+
+/* Links - Trust and Clarity */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Navigation Links */
+.links {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+}
+
+.links a {
+    flex: 1;
+    text-align: center;
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    transition: background-color 0.2s;
+}
+
+.links a:hover {
+    background-color: var(--light-bg);
+}
+
+/* Alert Messages - Clear Status Communication */
+.alert {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border-left: 4px solid;
+    font-weight: 500;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: var(--success-color);
+    color: #155724;
+}
+
+.alert-error {
+    background-color: var(--error-bg);
+    border-color: var(--danger-color);
+    color: #721c24;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: var(--warning-color);
+    color: #856404;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    border-color: #0c5460;
+    color: #0c5460;
+}
+
+/* Loading State */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--light-bg);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Helper Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: var(--light-text);
+}
+
+.mt {
+    margin-top: var(--spacing-md);
+}
+
+.mb {
+    margin-bottom: var(--spacing-md);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Home Page - Welcome Screen */
+.hero {
+    text-align: center;
+    padding: var(--spacing-xl);
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: var(--spacing-xl);
+    color: var(--light-text);
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.cta-buttons button,
+.cta-buttons a {
+    display: block;
+}
+
+/* 2-Column Layout on Mobile (Responsive) */
+@media (max-width: 600px) {
+    .container {
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea,
+    button,
+    .btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .links {
+        flex-direction: column;
+    }
+}
+
+/* Tablet Adaptations */
+@media (min-width: 600px) and (max-width: 900px) {
+    .container {
+        max-width: 500px;
+    }
+}
+
+/* Desktop Optimizations */
+@media (min-width: 900px) {
+    .container {
+        max-width: 600px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea {
+        border-width: 3px;
+    }
+    
+    button,
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

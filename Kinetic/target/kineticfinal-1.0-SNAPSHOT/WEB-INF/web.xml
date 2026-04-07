@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- Session configuration -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!-- Login Servlet -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>login.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!-- Register Servlet -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>register.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <!-- Forgot Servlet -->
+    <servlet>
+        <servlet-name>ForgotServlet</servlet-name>
+        <servlet-class>ForgotServlet.ForgotServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForgotServlet</servlet-name>
+        <url-pattern>/forgot</url-pattern>
+    </servlet-mapping>
+
+    <!-- Entry Servlet -->
+    <servlet>
+        <servlet-name>EntryServlet</servlet-name>
+        <servlet-class>com.kinetic.servlet.EntryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EntryServlet</servlet-name>
+        <url-pattern>/entry</url-pattern>
+    </servlet-mapping>
+
+    <!-- Logout Servlet -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.kinetic.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <!-- Officer Student Management Servlet -->
+    <servlet>
+        <servlet-name>OfficerStudentServlet</servlet-name>
+        <servlet-class>com.kinetic.servlet.OfficerStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OfficerStudentServlet</servlet-name>
+        <url-pattern>/officer/students</url-pattern>
+    </servlet-mapping>
+
+    <!-- Officer Reports Servlet -->
+    <servlet>
+        <servlet-name>ReportServlet</servlet-name>
+        <servlet-class>servlet.ReportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReportServlet</servlet-name>
+        <url-pattern>/officer/reports</url-pattern>
+    </servlet-mapping>
+
+    <!-- Officer Analytics Servlet -->
+    <servlet>
+        <servlet-name>AnalyticsServlet</servlet-name>
+        <servlet-class>servlet.AnalyticsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AnalyticsServlet</servlet-name>
+        <url-pattern>/officer/analytics</url-pattern>
+    </servlet-mapping>
+
+    <!-- Egerton Entry Logging Servlet -->
+    <servlet>
+        <servlet-name>LoggingServlet</servlet-name>
+        <servlet-class>com.egerton.entryloggingsystem.servlet.LoggingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoggingServlet</servlet-name>
+        <url-pattern>/LoggingServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome page -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

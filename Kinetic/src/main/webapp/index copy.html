@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kinetic Gate System - Signup</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Segoe UI, sans-serif; margin: 0; background: linear-gradient(120deg, #eef8ff, #f8fff3); color: #123; }
+        .wrapper { max-width: 860px; margin: 2rem auto; padding: 1rem; }
+        .card { background: #fff; border: 1px solid #d9e7d7; border-radius: 12px; padding: 1.2rem; }
+        h1 { margin-top: 0; }
+        form { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+        label { font-size: 0.9rem; color: #2b4a3a; display: block; margin-bottom: 0.25rem; }
+        input, select { width: 100%; padding: 0.55rem; border: 1px solid #bfd2bf; border-radius: 8px; box-sizing: border-box; }
+        .full { grid-column: 1 / -1; }
+        button { background: #126c3b; color: #fff; border: none; border-radius: 8px; padding: 0.7rem 1rem; cursor: pointer; }
+        .actions { display: flex; gap: 0.8rem; align-items: center; }
+        a { color: #0d5b99; }
+        @media (max-width: 768px) { form { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <h1>Create Account</h1>
+            <p>Register as a guard, student, or admin.</p>
+            <form action="signup" method="post">
+                <div>
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" name="firstName" required>
+                </div>
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" name="lastName" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" required>
+                </div>
+                <div>
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone">
+                </div>
+                <div>
+                    <label for="userType">User Type</label>
+                    <select id="userType" name="userType" required>
+                        <option value="">Select user type</option>
+                        <option value="GUARD">Guard</option>
+                        <option value="STUDENT">Student</option>
+                        <option value="ADMIN">Admin</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="dateOfBirth">Date of Birth</label>
+                    <input id="dateOfBirth" type="date" name="dateOfBirth" required>
+                </div>
+                <div>
+                    <label for="department">Department</label>
+                    <input id="department" name="department">
+                </div>
+                <div class="full actions">
+                    <button type="submit">Sign Up</button>
+                    <a href="login">Already have an account? Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
